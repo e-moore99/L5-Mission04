@@ -1,0 +1,117 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  /* font-weight: 400; */
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#header{
+  background-color: dodgerblue;
+  color: white;
+  padding-left: 2%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 10px;
+  border: 2px solid dodgerblue;
+  background-color: dodgerblue;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+}
+
+.tina-paragraph{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tina-img{
+  height: 100px;
+}
+
+.chat-window{
+  border: 2px solid dodgerblue;
+  border-radius: 15px;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgb(207, 207, 207);
+}
+
+.chat-width{
+  width: 60vw;
+}
+
+.input-box{
+  height: 35px;
+  border-radius: 10px;
+  /* background-color: #dfdfdf; */
+  margin-right: 10px;
+  width: 50vw;
+  border: 2px solid dodgerblue;
+}
+
+.input-div{
+  padding-top: 10px;
+}
+
+.user-chat{
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  width: 50vw;
+  margin: 10px;
+}
+
+.bot-chat{
+  background-color: #d0effd;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  width: 50vw;
+  margin: 10px;
+}
