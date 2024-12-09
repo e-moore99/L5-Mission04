@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChatMessage } from "./components/ChatMessage";
+import { ChatInput } from "./components/InputField";
 import "./App.css";
 
 function App() {
@@ -31,8 +32,8 @@ function App() {
         <div className="chat-window chat-width">
           {/* <ChatMessage {props} /> */}
           <p>
-            <p className="bot-chat">Hello I'm Tina</p>
-            <p className="user-chat">Hey Tina you bitch</p>
+            <p className="bot-chat">Tina: Hello I'm Tina</p>
+            <p className="user-chat">Me: Hey Tina you bitch</p>
           </p>
         </div>
         <div className="input-div chat-width">
