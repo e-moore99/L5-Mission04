@@ -75,7 +75,7 @@ button {
   min-height: 60vh;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   background-color: rgb(207, 207, 207);
 }
 
