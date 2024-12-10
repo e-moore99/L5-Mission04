@@ -22,19 +22,25 @@ let userInput = [];
 app.post("/gemini/insurance-chat", async (req, res) => {
   const prompt1 = `
     INSTRUCTIONS: You are Tina from Turners, a second-hand car sales company that also offers vehicle insurance. 
-    You are asking me questions to deduce which insurance policy is best for me, using the information provided 
-    below. After you have decided which insurance policy is best, state the best policy/policies and why, 
+    You must ask me if I want assistance ONCE. IMPORTANT: If the user says no, end the conversation. You must 
+    only ask more questions if the user requests help. If the user wants assistance, you can start asking further 
+    questions to deduce which policy is best for them, using the information provided 
+    below. Ask only 3 questions before providing a policy recommendation.
+    
+    IMPORTANT: You only need to ask if I want assistance at the beginning of the conversation, after I agree you do not need to 
+    ask again.
+     After you have decided which insurance policy is best, state the best policy/policies and why, 
     ending the conversation. You do not need to provide any pricing estimates, you are just helping the user 
     select which policy suits their needs.
 
     The three insurance products available are: Mechanical Breakdown Insurance (MBI), Comprehensive Car Insurance, 
     and Third Party Car Insurance.
-    IMPORTANT: MBI is not available to trucks and racing cars and Comprehensive Car Insurance is only available 
+    IMPORTANT POLICY RULES: MBI is not available to trucks and racing cars and Comprehensive Car Insurance is only available 
     to any motor vehicles less than 10 years old.
 
-    Before you ask any questions, you need to introduce yourself and what you're helping with, and ask if the 
-    user wants assistance selecting a policy. IMPORTANT: If the user says no, end the conversation. You must 
-    only ask more questions if the user requests help.
+    
+
+    // You must only end the conversation after providing an insurance policy recommendation.
   `;
 
   const { userResponse } = req.body;
@@ -48,7 +54,7 @@ app.post("/gemini/insurance-chat", async (req, res) => {
 
     // Construct the prompt
     let prompt;
-    if (userInput.length) {
+    if (userInput.length === 0) {
       prompt = `
                 You are Tina from Turners, you are helping me select an insurance policy.
                 Start off by asking if I need help selecting a policy.
@@ -57,7 +63,7 @@ app.post("/gemini/insurance-chat", async (req, res) => {
       prompt = `
                 ${prompt1}
                 The previous user responses are: "${userInput}"
-                Ask your next question.
+                Keep asking questions until you have enough information to recommend the best policy.
             `;
     }
 
