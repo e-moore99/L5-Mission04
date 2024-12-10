@@ -14,7 +14,7 @@
 }
 
 #header{
-  background-color: dodgerblue;
+  background-color: #1885d9;
   color: white;
   padding-left: 2%;
   height: 15vh;
@@ -22,16 +22,7 @@
   align-items: center;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+.body {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -48,8 +39,8 @@ h1 {
 
 button {
   border-radius: 10px;
-  border: 2px solid dodgerblue;
-  background-color: dodgerblue;
+  border: 2px solid #1885d9;
+  background-color: #1885d9;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -70,13 +61,13 @@ button {
 }
 
 .chat-window{
-  border: 2px solid dodgerblue;
+  border: 2px solid #1885d9;
   border-radius: 15px;
   min-height: 60vh;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
   flex-direction: column;
-  background-color: rgb(207, 207, 207);
 }
 
 .chat-width{
@@ -94,6 +85,7 @@ button {
 
 .input-div{
   padding-top: 10px;
+  margin-bottom: 2%;
 }
 
 .user-chat{
@@ -104,6 +96,7 @@ button {
   justify-content: flex-end;
   width: 50vw;
   margin: 10px;
+  box-shadow: 1px 1px 3px 1px #c2c2c2;
 }
 
 .bot-chat{
@@ -114,4 +107,5 @@ button {
   justify-content: flex-start;
   width: 50vw;
   margin: 10px;
+  box-shadow: -1px 1px 3px 1px #a9c7d6;
 }

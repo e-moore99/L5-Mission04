@@ -48,7 +48,7 @@ app.post("/gemini/insurance-chat", async (req, res) => {
 
     // Construct the prompt
     let prompt;
-    if (!userResponse) {
+    if (userInput.length) {
       prompt = `
                 You are Tina from Turners, you are helping me select an insurance policy.
                 Start off by asking if I need help selecting a policy.
@@ -60,10 +60,6 @@ app.post("/gemini/insurance-chat", async (req, res) => {
                 Ask your next question.
             `;
     }
-    //  else {
-    //   prompt = `You are providing feedback for a job interview for ${role}, please provide feedback based on the following responses ${userInput}, start your feedback by saying the interview is over,
-    //         then format the feedback as a paragraph, there is no need to separate and identify the feedback topics`;
-    // }
 
     // Generate response
     const result = await model.generateContent(prompt);
