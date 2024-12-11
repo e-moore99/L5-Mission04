@@ -1,8 +1,21 @@
-# React + Vite
+# Turners Insurance Recommendation App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app is built using React, NodeJS, and Google Gemini AI to provide a recommendation for an insurance solution for your vehicle.
 
-Currently, two official plugins are available:
+This app has been set up so you can build a docker image of it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To build the image of the front end and back end, navigate to the relevant folder in the terminal and run the following
+
+For frontend folder:
+```
+docker build -t m4-frontend .
+```
+For backend folder:
+```
+docker build -t m4-backend .
+```
+
+To run the complete app, go to the main folder for this repository and run the following:
+```
+docker compose up
+```
