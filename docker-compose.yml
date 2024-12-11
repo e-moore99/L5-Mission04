@@ -1,0 +1,9 @@
+services:
+  backend:
+    image: m4-backend
+    ports:
+      - "3000:3000"
+  frontend:
+    image: m4-frontend
+    ports:
+      - "80:80"
