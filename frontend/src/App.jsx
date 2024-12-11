@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChatMessage } from "./components/ChatMessage";
-import { ChatInput } from "./components/InputField";
 import "./App.css";
 
 function App() {
