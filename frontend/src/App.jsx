@@ -35,7 +35,7 @@ function App() {
             userResponse: message,
           }),
         },
-        console.log(message)
+        // console.log(message)
   
       );
 
@@ -44,7 +44,7 @@ function App() {
       }
 
       const data = await response.json();
-      console.log("Response from API:", data);
+      // console.log("Response from API:", data);
 
       if (data.isComplete) {
         setState((prev) => ({
@@ -102,7 +102,7 @@ function App() {
       }
 
       const data = await response.json();
-      console.log("Initial response from API:", data);
+      // console.log("Initial response from API:", data);
 
       setState((prev) => ({
         ...prev,
